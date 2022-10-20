@@ -21,10 +21,7 @@ void readData() {
         string ClassCode, UcCode, Weekday, StartHour, Duration, Type;
         float start, d;
         istringstream iss(line);
-        getline(iss, ClassCode, ',');
-        getline(iss, UcCode, ',');
-        getline(iss, Weekday, ',');
-        getline(iss, StartHour, ',');
+        iss >>ClassCode  >> UcCode >> Weekday >> StartHour;
         istringstream ss (StartHour);
         ss >> start;
         getline(iss, Duration, ',');
